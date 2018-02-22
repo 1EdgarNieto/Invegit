@@ -46,8 +46,8 @@
         android:id="@+id/imageView"
         android:layout_width="84sp"
         android:layout_height="84sp"
-        android:layout_alignEnd="@+id/cameraImageButton2"
-        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:contentDescription="TODO"
         app:srcCompat="@mipmap/iconofoto" />
 
@@ -56,9 +56,8 @@
         android:id="@+id/imageView2"
         android:layout_width="84sp"
         android:layout_height="84sp"
-        android:layout_above="@+id/chronometer"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="129dp"
+        android:layout_above="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
         android:contentDescription="TODO"
         app:srcCompat="@mipmap/iconofoto" />
 
