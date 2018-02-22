@@ -62,5 +62,14 @@
         android:contentDescription="TODO"
         app:srcCompat="@mipmap/iconofoto" />
 
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chronometer"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp"
+        app:srcCompat="@mipmap/iconofoto2" />
+
 
 </RelativeLayout>
