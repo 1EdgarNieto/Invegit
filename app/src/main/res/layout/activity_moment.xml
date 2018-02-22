@@ -42,33 +42,12 @@
         android:layout_alignStart="@+id/videoOnlineImageButton" />
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="64sp"
-        android:layout_height="64sp"
-        android:layout_below="@+id/chronometer"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp"
-        android:contentDescription="TODO"
-        app:srcCompat="@mipmap/iconofoto" />
-
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="84sp"
-        android:layout_height="84sp"
-        android:layout_above="@+id/cameraImageButton2"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="TODO"
-        app:srcCompat="@mipmap/iconofoto" />
-
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/chronometer"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="22dp"
+        android:layout_below="@+id/chronometer"
+        android:layout_centerHorizontal="true"
         app:srcCompat="@mipmap/iconofoto2" />
 
 
