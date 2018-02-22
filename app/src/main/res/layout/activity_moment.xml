@@ -46,7 +46,7 @@
         android:id="@+id/imageView"
         android:layout_width="84sp"
         android:layout_height="84sp"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:contentDescription="TODO"
         app:srcCompat="@mipmap/iconofoto" />
