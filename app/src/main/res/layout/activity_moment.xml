@@ -15,8 +15,8 @@
 
     <ImageButton
         android:id="@+id/videoOnlineImageButton"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_above="@+id/chronometer"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/video_button"
@@ -27,7 +27,7 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_above="@+id/videoOnlineImageButton"
-        android:layout_alignStart="@+id/videoOnlineImageButton"
+        android:layout_centerHorizontal="true"
         android:contentDescription="@string/camera_button"
         android:src="@mipmap/btn_camera" />
 
