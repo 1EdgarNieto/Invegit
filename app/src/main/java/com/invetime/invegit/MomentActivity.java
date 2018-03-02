@@ -192,7 +192,7 @@ public class MomentActivity extends AppCompatActivity {
                             Integer afState = captureResult.get(CaptureResult.CONTROL_AF_STATE);
                             if(afState == CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED ||
                                     afState == CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED) {
-                                Toast.makeText(getApplicationContext(), "AF Locked!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Saved Invetime!", Toast.LENGTH_SHORT).show();
                                 startStillCaptureRequest();
                             }
                             break;
@@ -220,7 +220,7 @@ public class MomentActivity extends AppCompatActivity {
                             Integer afState = captureResult.get(CaptureResult.CONTROL_AF_STATE);
                             if(afState == CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED ||
                                     afState == CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED) {
-                                Toast.makeText(getApplicationContext(), "AF Locked!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Capture Invetime!", Toast.LENGTH_SHORT).show();
                                 startStillCaptureRequest();
                             }
                             break;
@@ -603,7 +603,7 @@ public class MomentActivity extends AppCompatActivity {
 
     private void createVideoFolder() {
         File movieFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES);
-        mVideoFolder = new File(movieFile, "Invetime");
+        mVideoFolder = new File(movieFile, "Invetime Video");
         if(!mVideoFolder.exists()) {
             mVideoFolder.mkdirs();
         }
@@ -611,7 +611,7 @@ public class MomentActivity extends AppCompatActivity {
 
     private File createVideoFileName() throws IOException {
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String prepend = "VIDEO_" + timestamp + "_";
+        String prepend = "Invetime_Video_" + timestamp + "_";
         File videoFile = File.createTempFile(prepend, ".mp4", mVideoFolder);
         mVideoFileName = videoFile.getAbsolutePath();
         return videoFile;
@@ -619,7 +619,7 @@ public class MomentActivity extends AppCompatActivity {
 
     private void createImageFolder() {
         File imageFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        mImageFolder = new File(imageFile, "Invetime");
+        mImageFolder = new File(imageFile, "Invetime Image");
         if(!mImageFolder.exists()) {
             mImageFolder.mkdirs();
         }
@@ -627,7 +627,7 @@ public class MomentActivity extends AppCompatActivity {
 
     private File createImageFileName() throws IOException {
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String prepend = "IMAGE_" + timestamp + "_";
+        String prepend = "Invetime_Image_" + timestamp + "_";
         File imageFile = File.createTempFile(prepend, ".jpg", mImageFolder);
         mImageFileName = imageFile.getAbsolutePath();
         return imageFile;
