@@ -603,7 +603,7 @@ public class MomentActivity extends AppCompatActivity {
 
     private void createVideoFolder() {
         File movieFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES);
-        mVideoFolder = new File(movieFile, "camera2VideoImage");
+        mVideoFolder = new File(movieFile, "Invetime");
         if(!mVideoFolder.exists()) {
             mVideoFolder.mkdirs();
         }
@@ -619,7 +619,7 @@ public class MomentActivity extends AppCompatActivity {
 
     private void createImageFolder() {
         File imageFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        mImageFolder = new File(imageFile, "camera2VideoImage");
+        mImageFolder = new File(imageFile, "Invetime");
         if(!mImageFolder.exists()) {
             mImageFolder.mkdirs();
         }
