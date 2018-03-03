@@ -50,7 +50,9 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
-public class MomentActivity extends AppCompatActivity {
+public class MomentActivity extends AppCompatActivity implements View.OnClickListener {
+
+    ImageButton imagenButton3;
 
     private static final String TAG = "Camera2VideoImageActivi";
 
@@ -271,6 +273,9 @@ public class MomentActivity extends AppCompatActivity {
         createVideoFolder();
         createImageFolder();
 
+        imagenButton3 = (ImageButton) findViewById(R.id.cameraImageButton3);
+        imagenButton3.setOnClickListener(this);
+
         mChronometer = (Chronometer) findViewById(R.id.chronometer);
         mTextureView = (TextureView) findViewById(R.id.textureView);
         mStillImageButton = (ImageButton) findViewById(R.id.cameraImageButton2);
@@ -321,6 +326,19 @@ public class MomentActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.cameraImageButton3:
+                Intent intent = new Intent(this,SocialActivity.class);
+                startActivity(intent);
+                break;
+
+            default:
+                break;
+        }
     }
 
     @Override
@@ -400,7 +418,7 @@ public class MomentActivity extends AppCompatActivity {
                 StreamConfigurationMap map = cameraCharacteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
                 int deviceOrientation = getWindowManager().getDefaultDisplay().getRotation();
                 mTotalRotation = sensorToDeviceRotation(cameraCharacteristics, deviceOrientation);
-                boolean swapRotation = mTotalRotation == 270 || mTotalRotation == 90;
+                boolean swapRotation = mTotalRotation == 90 || mTotalRotation == 270;
                 int rotatedWidth = width;
                 int rotatedHeight = height;
                 if(swapRotation) {

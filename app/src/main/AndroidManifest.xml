@@ -13,11 +13,21 @@
         android:roundIcon="@mipmap/iconoinvetime"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MomentActivity">
+        <activity
+            android:name=".MomentActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SocialActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SOCIALACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
