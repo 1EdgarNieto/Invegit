@@ -400,7 +400,7 @@ public class MomentActivity extends AppCompatActivity {
                 StreamConfigurationMap map = cameraCharacteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
                 int deviceOrientation = getWindowManager().getDefaultDisplay().getRotation();
                 mTotalRotation = sensorToDeviceRotation(cameraCharacteristics, deviceOrientation);
-                boolean swapRotation = mTotalRotation == 90 || mTotalRotation == 270;
+                boolean swapRotation = mTotalRotation == 270 || mTotalRotation == 90;
                 int rotatedWidth = width;
                 int rotatedHeight = height;
                 if(swapRotation) {
